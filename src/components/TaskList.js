@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { TaskCard } from "./TaskCard";
 import { BoxCard } from "./BoxCard";
+import "./TaskList.css";
 
 export const TaskList = ({info}) => {
   const [task, setTask] = useState([

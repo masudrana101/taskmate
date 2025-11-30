@@ -1,7 +1,9 @@
+import "./Footer.css";
+
 export const Footer = () => {
   return (
     <footer>
-        <p>hello footer</p>
+        <p>2025-taskmate</p>
     </footer>
   )
  }

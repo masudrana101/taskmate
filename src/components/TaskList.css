@@ -1,0 +1,24 @@
+.tasklist h1{
+  font-size: 28px;
+  text-align: center;
+  margin: 20px;
+}
+
+.tasklist ul{
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+
+}
+
+
+.tasklist button.trigger{
+  border: 0px;
+  border-radius: 5px;
+  background-color: var(--theme-button);
+  color: white;
+  padding: 5px 10px;
+  cursor: pointer;
+
+}

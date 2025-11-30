@@ -1,6 +1,6 @@
 .tasklist h1{
   font-size: 28px;
-  text-align: center;
+  text-align: left;
   margin: 20px;
 }
 
@@ -20,5 +20,6 @@
   color: white;
   padding: 5px 10px;
   cursor: pointer;
+
 
 }

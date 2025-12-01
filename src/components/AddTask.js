@@ -3,16 +3,37 @@ import "./AddTask.css";
  
 export const AddTask = () => {
   const [taskValue, setTaskValue] = useState("");
+  const [progress, setProgress] = useState(false);
 
   const handleChange = (event) => {
     setTaskValue(event.target.value);
+  }
+  const handleReset = () => { 
+    setTaskValue("");
+    setProgress (false);
+  }
+
+    const handleSubmit = (event) => {
+    event.preventDefault();
+    const task ={
+      id: Math.floor(Math.random() * 10000),
+      name: taskValue,
+      completed: Boolean(progress)
+    }
+    handleReset();
   }
 
 
   return (
     <section className="addtask"> 
-    <form>
-         <input onChange={(e) => setTaskValue} type="text" name="task"  id="task" placeholder="Task Name" autoComplete="off" />
+    <form onSubmit={handleSubmit}>
+         <input onChange={handleChange} type="text" name="task"  id="task" placeholder="Task Name" autoComplete="off" value={taskValue}/>
+         <select onChange={(event) => console.log(event.target.value)}>
+            <option value="false">pending</option>
+            <option value="true">completed</option>
+         </select>
+
+         <span onClick={handleReset} className="reset ">Reset</span>
          <button type="submit">Add Task</button>
     </form>
     <p>{taskValue.length}</p>

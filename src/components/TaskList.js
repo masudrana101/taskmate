@@ -4,28 +4,21 @@ import { BoxCard } from "./BoxCard";
 import "./TaskList.css";
 import "./AddTask.css";
 
-export const TaskList = () => {
-  const [task, setTask] = useState([
-    { id: 1114, name: "This is a sample.", completed: true },
-    { id: 1115, name: "This is a sample 2.", completed: true },
-    { id: 1116, name: "This is a sample 3.", completed: false }
-  ]);
+export const TaskList = ({tasks, setTasks}) => {
   const [show, setShow] = useState([true]);
 
   function handleDelete(id) {
-    setTask(task.filter((task) => task.id !== id));
+    setTasks(tasks.filter((task) => task.id !== id));
   }
 
   return (
     <section className="tasklist">
       <ul>
-        
         <div className="header">
            <h1>Task List </h1>
           <button className="trigger" onClick={() => setShow(!show)}>{show ? "Hidd" : "show"}{" "}</button>
-      
         </div>
-        {show && task.map((task) => (
+        {show && tasks.map((task) => (
               <TaskCard key={task.id} task={task} handleDelete={handleDelete} />
         ))}
         

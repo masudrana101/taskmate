@@ -8,11 +8,7 @@ import './App.css';
 
 
 function App() {
-   const [tasks, setTasks] = useState([
-    { id: 1114, name: "This is a sample.", completed: true },
-    { id: 1115, name: "This is a sample 2.", completed: true },
-    { id: 1116, name: "This is a sample 3.", completed: false }
-  ]);
+   const [tasks, setTasks] = useState([]);
   
 
   return (
